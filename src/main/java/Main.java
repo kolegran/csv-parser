@@ -11,11 +11,10 @@ public class Main {
 
     public static List<User> loadFromCsv(String csvFile) {
         try {
-            CSVReader reader = new CSVReader(new FileReader(csvFile));
+            CSVReader reader = new CSVReader(new FileReader(csvFile), ',', '"', 1);
             List<User> users = new ArrayList<>();
             String[] line;
-
-            reader.readNext();
+            
             while ((line = reader.readNext()) != null) {
                 User user = new User();
 
