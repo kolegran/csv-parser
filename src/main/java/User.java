@@ -1,39 +1,30 @@
-public class User {
-    private Integer id;
-    private String name;
-    private int age;
-    private boolean sex;
+class User {
+    private final Integer id;
+    private final String name;
+    private final int age;
+    private final boolean sex;
+
+    public User(Integer id, String name, int age, boolean sex) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+    }
 
     public Integer getId() {
         return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getAge() {
         return age;
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
-
     public boolean isSex() {
         return sex;
-    }
-
-    public void setSex(boolean sex) {
-        this.sex = sex;
     }
 
     @Override
