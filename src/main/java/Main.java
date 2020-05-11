@@ -14,7 +14,6 @@ public class Main {
             CSVReader reader = new CSVReader(new FileReader(csvFile), ',', '"', 1);
             List<User> users = new ArrayList<>();
             String[] line;
-            
             while ((line = reader.readNext()) != null) {
                 User user = new User();
 
